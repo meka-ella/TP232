@@ -204,9 +204,9 @@ def generer_conseils(resultats_df, moy, habitudes=None):
     alertes  = []
 
     # Analyse des UE
-    faibles   = resultats_df[resultats_df["Note"] < 10]
-    moyennes  = resultats_df[(resultats_df["Note"] >= 10) & (resultats_df["Note"] < 12)]
-    fortes    = resultats_df[resultats_df["Note"] >= 14]
+    faibles   = resultats_df[resultats_df["Note finale"] < 10]
+    moyennes  = resultats_df[(resultats_df["Note finale"] >= 10) & (resultats_df["Note finale"] < 12)]
+    fortes    = resultats_df[resultats_df["Note finale"] >= 14]
 
     if len(faibles) > 0:
         noms = ", ".join(faibles["UE"].tolist())
